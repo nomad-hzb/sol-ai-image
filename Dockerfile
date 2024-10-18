@@ -107,7 +107,6 @@ COPY configs/nomad.yaml nomad.yaml
 RUN mkdir -p /app/.volumes/fs \
  && chown -R nomad:1000 /app \
  && chown -R nomad:1000 /opt/venv \
- && chown -R nomad:1000 /nonexistent \
  && mkdir nomad \
  && cp /opt/venv/lib/python3.12/site-packages/nomad/jupyterhub_config.py nomad/
 
