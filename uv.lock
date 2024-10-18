@@ -913,6 +913,15 @@ wheels = [
 ]
 
 [[package]]
+name = "fasteners"
+version = "0.19"
+source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/5f/d4/e834d929be54bfadb1f3e3b931c38e956aaa3b235a46a3c764c26c774902/fasteners-0.19.tar.gz", hash = "sha256:b4f37c3ac52d8a445af3a66bce57b33b5e90b97c696b7b984f530cf8f0ded09c", size = 24832 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/61/bf/fd60001b3abc5222d8eaa4a204cd8c0ae78e75adc688f33ce4bf25b7fafa/fasteners-0.19-py3-none-any.whl", hash = "sha256:758819cb5d94cdedf4e836988b74de396ceacb8e2794d21f82d131fd9ee77237", size = 18679 },
+]
+
+[[package]]
 name = "filelock"
 version = "3.3.1"
 source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
@@ -1054,6 +1063,20 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/18/87/470e01a940307796f1d25f8167b551a968540fbe0551c0ebb853cb527dd6/greenlet-3.1.1-cp313-cp313t-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:6510bf84a6b643dabba74d3049ead221257603a253d0a9873f55f6a59a65f822", size = 602753 },
     { url = "https://files.pythonhosted.org/packages/e2/72/576815ba674eddc3c25028238f74d7b8068902b3968cbe456771b166455e/greenlet-3.1.1-cp313-cp313t-musllinux_1_1_aarch64.whl", hash = "sha256:04b013dc07c96f83134b1e99888e7a79979f1a247e2a9f59697fa14b5862ed01", size = 1122731 },
     { url = "https://files.pythonhosted.org/packages/ac/38/08cc303ddddc4b3d7c628c3039a61a3aae36c241ed01393d00c2fd663473/greenlet-3.1.1-cp313-cp313t-musllinux_1_1_x86_64.whl", hash = "sha256:411f015496fec93c1c8cd4e5238da364e1da7a124bcb293f085bf2860c32c6f6", size = 1142112 },
+]
+
+[[package]]
+name = "griddataformats"
+version = "1.0.2"
+source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
+dependencies = [
+    { name = "mrcfile" },
+    { name = "numpy" },
+    { name = "scipy" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/da/8b/e273fb4b3bb3d6c31b6387b34c602d96c407f535f2c58b17512f8b5a2746/GridDataFormats-1.0.2.tar.gz", hash = "sha256:b93cf7f36fce33dbc428026f26dba560d5c7ba2387caca495bad920f90094502", size = 2158614 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/89/ab/9cae972ca177f7c64017f4b76f3780c832da52737b95c3e39ed0701af7a7/GridDataFormats-1.0.2-py3-none-any.whl", hash = "sha256:4562bb2da9a064a8e6640e5fb853e204c8f32f6403651703f6b0ef58a009054c", size = 2140075 },
 ]
 
 [[package]]
@@ -1820,6 +1843,42 @@ wheels = [
 ]
 
 [[package]]
+name = "mdanalysis"
+version = "2.7.0"
+source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
+dependencies = [
+    { name = "fasteners" },
+    { name = "griddataformats" },
+    { name = "joblib" },
+    { name = "matplotlib" },
+    { name = "mda-xdrlib" },
+    { name = "mmtf-python" },
+    { name = "numpy" },
+    { name = "packaging" },
+    { name = "scipy" },
+    { name = "threadpoolctl" },
+    { name = "tqdm" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/3e/67/c4ec984d4648c2435717fe8f35c54f22d6375eb0383060f8ebc21587bd13/MDAnalysis-2.7.0.tar.gz", hash = "sha256:572e82945e5d058e3749ec5f18e6b3831ef7f2119cb54672567ae9a977201e93", size = 3938260 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ff/da/ba9ab45fa9a082834cd4b3ca8cede9ba3e23aa03bb8867a33e1d623489fa/MDAnalysis-2.7.0-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:752a7e79f2195e284bd5c6c74510e7a587050aa15a5fd5d1f0b1c173238c7f9e", size = 4190993 },
+    { url = "https://files.pythonhosted.org/packages/31/70/22ff9aa6b28b87f4a1b64d07d008ec6a7ef6f53d3251b41bdf0b35eecbd0/MDAnalysis-2.7.0-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:d9f5506b70614aa21974488c61b150dcf443c2ef50bacba0ff9c5369fdd1dec8", size = 4092647 },
+    { url = "https://files.pythonhosted.org/packages/c4/37/b0d4fc7e712feb13fe95fb1250805388f1e366fd4fdaa247025e579d2676/MDAnalysis-2.7.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:cd8d2d5318f5adaa2b4143c60f5006bb9f5ef294eea87bea5b35127cc8f30399", size = 9942832 },
+    { url = "https://files.pythonhosted.org/packages/55/22/bbca0189de20e3db885fea4489b4566454402639d4c9d8897c4b7d221775/MDAnalysis-2.7.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:3f6924273c498c7134cfe985f2779ebf2f1d4204161c354ae8175779a20794e9", size = 10094570 },
+    { url = "https://files.pythonhosted.org/packages/77/59/2907931e82c2ca834a5a8128b792aec2475fee0f9a0fcef1ec7aa68f5fb7/MDAnalysis-2.7.0-cp310-cp310-win_amd64.whl", hash = "sha256:348372eacd74a6be0cd7e2af9a5d6f0aae6b86c16868937bd57f4636e4e6141e", size = 3999722 },
+    { url = "https://files.pythonhosted.org/packages/12/61/90e5be61437b90106f07f05f61b794b4694313f30c59a5c15a00ae65800b/MDAnalysis-2.7.0-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:45a6ad90705ff50ddae7f0d7a2b3ddfd0185e3e8314930874b9fc3ac56853ec9", size = 4190394 },
+    { url = "https://files.pythonhosted.org/packages/62/d1/7dcc25e742929fb49fcb72c2822d3d00a24b48ba786e8833882883d2c72d/MDAnalysis-2.7.0-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:3be89d52e3442d58b65eef89626147d1e319a7912a913c7fccd78ba878418800", size = 4090946 },
+    { url = "https://files.pythonhosted.org/packages/0d/3c/e9982ef4e0ffb376defe9ddac248cb49093a3eb7e32d11d517aa65faa32f/MDAnalysis-2.7.0-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:9358a88e4558febc4eca58dc69aeaf836b8eacc92556e0205c6c40497907e3ab", size = 10420408 },
+    { url = "https://files.pythonhosted.org/packages/b1/b7/8283e114b1addda0ec0ff13171655254bc47cee9b2d57b4ca72d6f70ed47/MDAnalysis-2.7.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:1fd4b24cfb5fc63e9ae758251af947702f1a033f9bb38e54e206453c6afd3db0", size = 10607396 },
+    { url = "https://files.pythonhosted.org/packages/86/4d/19a9e60893044ce103ed9def619e7916ff8f341b1f967a1b7767f08c969a/MDAnalysis-2.7.0-cp311-cp311-win_amd64.whl", hash = "sha256:eea51334fb3cc45475003e992c63205f5c5ea34920154ab2cea9d44120b5904b", size = 4002321 },
+    { url = "https://files.pythonhosted.org/packages/c1/0a/59a809a628abfebc38d55b3db39bdd42bc96bbcdd9adc3c93de017568c29/MDAnalysis-2.7.0-cp312-cp312-macosx_10_9_x86_64.whl", hash = "sha256:486794d7e957e959f612e1f664878e0244594864c057bff0748eca6fef7d1523", size = 4205952 },
+    { url = "https://files.pythonhosted.org/packages/d5/45/2309365fa1ec351788ed3c21725f1268613c988db0597efcce32a5b982e2/MDAnalysis-2.7.0-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:aaf7c158a65e032d15ef63cc08a6790d87ec3d7ee6037eb778d1959aec6c305a", size = 4100055 },
+    { url = "https://files.pythonhosted.org/packages/ff/c3/c97adab6fefa4b68a74a7408706f9eb2c49764a71caecba10c035c04ceeb/MDAnalysis-2.7.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:5613c102d2ba4ac6ff2527ba9ea1b2564fdd90f3e06e921752bbcad82c6b173e", size = 10280549 },
+    { url = "https://files.pythonhosted.org/packages/f3/96/96574e2c7daae1bbb245480682c3e625e46933bcc95102385ea375566a60/MDAnalysis-2.7.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:cf975db416007242e5674ff44803ce8e36313c5602f401244858e26e848b9411", size = 10533987 },
+    { url = "https://files.pythonhosted.org/packages/58/45/756cd590d7bbd2056471534d2fba26f984fcb982b1fbf5caba865ac3ef01/MDAnalysis-2.7.0-cp312-cp312-win_amd64.whl", hash = "sha256:3bcc653057e8ea6f35a32e9993d840ae919842fa0756a966966d6eedc1072ee5", size = 4006367 },
+]
+
+[[package]]
 name = "mergedeep"
 version = "1.3.4"
 source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
@@ -1973,6 +2032,18 @@ wheels = [
 ]
 
 [[package]]
+name = "mmtf-python"
+version = "1.1.3"
+source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
+dependencies = [
+    { name = "msgpack" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/d8/0f/f3c132dc9aac9a3f32a0eba7a80f07d14e7624e96f9245eeac5fe48f42cd/mmtf-python-1.1.3.tar.gz", hash = "sha256:12a02fe1b7131f0a2b8ce45b46f1e0cdd28b9818fe4499554c26884987ea0c32", size = 46032 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/3c/f1/efea3da858043ed9c078f507ab744b6d00933c7bc8a75a24821937600178/mmtf_python-1.1.3-py2.py3-none-any.whl", hash = "sha256:502031c509a8a6d73e042781abbd88b84c1afffe65097eb0c1b70f329ffd1e6e", size = 25252 },
+]
+
+[[package]]
 name = "mongoengine"
 version = "0.29.1"
 source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
@@ -2014,6 +2085,18 @@ source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages
 sdist = { url = "https://files.pythonhosted.org/packages/e0/47/dd32fa426cc72114383ac549964eecb20ecfd886d1e5ccf5340b55b02f57/mpmath-1.3.0.tar.gz", hash = "sha256:7a28eb2a9774d00c7bc92411c19a89209d5da7c4c9a9e227be8330a23a25b91f", size = 508106 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/43/e3/7d92a15f894aa0c9c4b49b8ee9ac9850d6e63b03c9c32c0367a13ae62209/mpmath-1.3.0-py3-none-any.whl", hash = "sha256:a0b2b9fe80bbcd81a6647ff13108738cfb482d481d826cc0e02f5b35e5c88d2c", size = 536198 },
+]
+
+[[package]]
+name = "mrcfile"
+version = "1.5.3"
+source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
+dependencies = [
+    { name = "numpy" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/25/3a/ab44bfb0417065526996e92c49a4b2727152d49cdbb212a907a5e871f3d1/mrcfile-1.5.3.tar.gz", hash = "sha256:3f304c02cb9f0900b26683679c5d3d750da64b5c370b58d69af8a8ddf720c0ce", size = 57453 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/9f/c6/cdc67e91c1cac23dd788ebe487d09a61206018bc0a71d576a69603bc91c2/mrcfile-1.5.3-py2.py3-none-any.whl", hash = "sha256:fbf2b5583afae38656343f2d6bac67d85e0e798b2fd608be63ecd2758cd67c61", size = 44786 },
 ]
 
 [[package]]
@@ -2192,7 +2275,7 @@ requires-dist = [
     { name = "nomad-perotf", marker = "extra == 'plugins'", git = "https://github.com/nomad-hzb/nomad-perotf.git" },
     { name = "nomad-perotf-parser", marker = "extra == 'plugins'", git = "https://github.com/nomad-hzb/nomad-perotf-parser.git" },
     { name = "nomad-pvcomb", marker = "extra == 'plugins'", git = "https://codebase.helmholtz.cloud/pvcomb/nomad-pvcomb.git?rev=develop" },
-    { name = "perovskite-solar-cell-database", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-perovskite-solar-cells-database.git?rev=f394d21abafeb659729af0c94e5f90949fce01c1#f394d21abafeb659729af0c94e5f90949fce01c1" },
+    { name = "perovskite-solar-cell-database", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-perovskite-solar-cells-database.git" },
 ]
 
 [[package]]
@@ -2359,6 +2442,34 @@ dependencies = [
     { name = "igor2" },
     { name = "nptdms" },
     { name = "pvlib" },
+]
+
+[[package]]
+name = "nomad-schema-plugin-run"
+version = "1.0.2"
+source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
+dependencies = [
+    { name = "nomad-lab" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/cb/23/ba62d935c69fcfb9e70071bb5409e9d6f7513a2cdbcdd7c7fc147af60007/nomad_schema_plugin_run-1.0.2.tar.gz", hash = "sha256:07e3e4946d733111d08e03bdb85a0d18339086a1efbaac6c76071c07214571de", size = 138143 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/45/34/2cea78ac455fa5bca4c5bd05740c1579ba352deaba3ab1e11ffa8a7631ae/nomad_schema_plugin_run-1.0.2-py3-none-any.whl", hash = "sha256:744762c060b9d5b78c82663b923aa3756249798b42b3909408a959a1c87c388b", size = 45238 },
+]
+
+[[package]]
+name = "nomad-schema-plugin-simulation-workflow"
+version = "1.0.4"
+source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
+dependencies = [
+    { name = "mdanalysis" },
+    { name = "networkx" },
+    { name = "nomad-lab" },
+    { name = "nomad-schema-plugin-run" },
+    { name = "scipy" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/4d/51/2df7a0c5442d9f41cb25cfe99ad5d665683eb051705393a66928d8f79aeb/nomad_schema_plugin_simulation_workflow-1.0.4.tar.gz", hash = "sha256:5c25dc7fa378b85e0a08248e402b4ce6ead996665418562704ec969797529dd6", size = 8866404 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b1/ea/cf464e79892bd215ff3c0a737d4a32ae63c049f5f75b006bc05c8c78cdbf/nomad_schema_plugin_simulation_workflow-1.0.4-py3-none-any.whl", hash = "sha256:3fee5e43970000f1bbe9ecd77adb9f00d16641cafb6a6d42ad71031b577e5b5a", size = 55136 },
 ]
 
 [[package]]
@@ -2630,9 +2741,12 @@ wheels = [
 [[package]]
 name = "perovskite-solar-cell-database"
 version = "0.0.0"
-source = { git = "https://github.com/FAIRmat-NFDI/nomad-perovskite-solar-cells-database.git?rev=f394d21abafeb659729af0c94e5f90949fce01c1#f394d21abafeb659729af0c94e5f90949fce01c1" }
+source = { git = "https://github.com/FAIRmat-NFDI/nomad-perovskite-solar-cells-database.git#b29cbbd808a6c9c0c45cdd10c6e7982375342d9f" }
 dependencies = [
     { name = "lxml-html-clean" },
+    { name = "nomad-lab" },
+    { name = "nomad-schema-plugin-run" },
+    { name = "nomad-schema-plugin-simulation-workflow" },
     { name = "openpyxl" },
     { name = "rdkit" },
 ]
