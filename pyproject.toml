@@ -26,7 +26,6 @@ plugins = [
   "nomad-hysprint @ git+https://github.com/nomad-hzb/nomad-hysprint.git",
   "nomad-hiern @ git+https://github.com/nomad-hzb/nomad-hiern.git",
   "nomad-perotf @ git+https://github.com/nomad-hzb/nomad-perotf.git",
-  "nomad-perotf-parser @ git+https://github.com/nomad-hzb/nomad-perotf-parser.git",
   "nomad-pvcomb @ git+https://codebase.helmholtz.cloud/pvcomb/nomad-pvcomb.git@develop"
 ]
 jupyter = []
