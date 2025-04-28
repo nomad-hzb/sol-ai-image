@@ -139,10 +139,12 @@ WORKDIR "${HOME}"
 
 COPY --from=ghcr.io/astral-sh/uv:0.4 /uv /bin/uv
 
+USER root
 RUN --mount=type=cache,target=/root/.cache/uv \
     --mount=type=bind,source=uv.lock,target=uv.lock \
     --mount=type=bind,source=pyproject.toml,target=pyproject.toml \
     uv export --extra plugins --extra jupyter | uv pip install -r /dev/stdin --system
+USER ${NB_UID}
 
 
 # Get rid ot the following message when you open a terminal in jupyterlab:
