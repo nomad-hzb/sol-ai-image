@@ -139,9 +139,9 @@ WORKDIR "${HOME}"
 
 COPY --from=ghcr.io/astral-sh/uv:0.4 /uv /bin/uv
 
-#RUN --mount=type=cache,target=/root/.cache/uv \
-#    --mount=type=bind,source=uv.lock,target=uv.lock \
-RUN --mount=type=bind,source=pyproject.toml,target=pyproject.toml \
+RUN --mount=type=cache,target=/root/.cache/uv \
+    --mount=type=bind,source=uv.lock,target=uv.lock \
+    --mount=type=bind,source=pyproject.toml,target=pyproject.toml \
     uv export --extra plugins --extra jupyter | uv pip install -r /dev/stdin --system
 
 
