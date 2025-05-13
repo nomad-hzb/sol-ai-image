@@ -35,7 +35,7 @@ plugins = [
   "nomad-tfsc-general @ git+https://github.com/nomad-hzb/nomad-tfsc-general.git"
 ]
 jupyter = ["voila", "jupyterlab>=4.0"]
-dev = ["nomad-lab[parsing, infrastructure, dev]==1.3.16rc2]
+dev = ["nomad-lab[parsing, infrastructure, dev]==1.3.16rc2"]
 
 [tool.uv]
 extra-index-url = [
