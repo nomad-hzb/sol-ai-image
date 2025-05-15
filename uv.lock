@@ -200,6 +200,15 @@ wheels = [
 ]
 
 [[package]]
+name = "async-generator"
+version = "1.10"
+source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/ce/b6/6fa6b3b598a03cba5e80f829e0dadbb49d7645f523d209b2fb7ea0bbb02a/async_generator-1.10.tar.gz", hash = "sha256:6ebb3d106c12920aaae42ccb6f787ef5eefdcdd166ea3d628fa8476abe712144", size = 29870, upload-time = "2018-08-01T03:36:21.69Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/71/52/39d20e03abd0ac9159c162ec24b93fbcaa111e8400308f2465432495ca2b/async_generator-1.10-py3-none-any.whl", hash = "sha256:01c7bf666359b4967d2cda0000cc2e4af16a0ae098cbffcb8472fb9e8ad6585b", size = 18857, upload-time = "2018-08-01T03:36:20.029Z" },
+]
+
+[[package]]
 name = "async-lru"
 version = "2.0.5"
 source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
@@ -1874,30 +1883,44 @@ wheels = [
 ]
 
 [[package]]
+name = "jupyter-telemetry"
+version = "0.1.0"
+source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
+dependencies = [
+    { name = "jsonschema" },
+    { name = "python-json-logger" },
+    { name = "ruamel-yaml" },
+    { name = "traitlets" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/c4/59/edd04590235d9afe2b2b49ec449c6146dc71b717110f4a1034d52eb54303/jupyter_telemetry-0.1.0.tar.gz", hash = "sha256:445c613ae3df70d255fe3de202f936bba8b77b4055c43207edf22468ac875314", size = 9607, upload-time = "2020-04-10T16:32:02.698Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/90/ab/8d565a0797dacf82dea161ba5c40bd1f3ddbf365e3f7f8fd63007f03b19f/jupyter_telemetry-0.1.0-py3-none-any.whl", hash = "sha256:1de3e423b23aa40ca4a4238d65c56dda544061ff5aedc3f7647220ed7e3b9589", size = 7058, upload-time = "2020-04-10T16:32:01.302Z" },
+]
+
+[[package]]
 name = "jupyterhub"
-version = "5.3.0"
+version = "4.1.6"
 source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
 dependencies = [
     { name = "alembic" },
+    { name = "async-generator" },
     { name = "certipy" },
-    { name = "idna" },
     { name = "jinja2" },
-    { name = "jupyter-events" },
+    { name = "jupyter-telemetry" },
     { name = "oauthlib" },
     { name = "packaging" },
     { name = "pamela", marker = "sys_platform != 'win32'" },
     { name = "prometheus-client" },
     { name = "psutil", marker = "sys_platform == 'win32'" },
-    { name = "pydantic" },
     { name = "python-dateutil" },
     { name = "requests" },
     { name = "sqlalchemy" },
     { name = "tornado" },
     { name = "traitlets" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/02/9b/565e1bda8d1bc785ab7dd5ef6203a02517589fdb17097dc365027c17fa39/jupyterhub-5.3.0.tar.gz", hash = "sha256:57834b36e7db8f26f21d9aeba1e1d5b8c91b9ff14a7c144097178977aa1e723f", size = 16990804, upload-time = "2025-04-15T12:56:14.288Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/0d/95/5ab80047a1f8605793163644e70a9815d772c519b57c5faa674110fcc044/jupyterhub-4.1.6.tar.gz", hash = "sha256:9ee41780bcf4b6faca5edce1d0b0e5ccc3dc0e5711a82fab5c637006162da2d7", size = 9090735, upload-time = "2024-07-31T08:46:37.874Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/04/fd/26d2f10ad6a584f3b4f9e9c72e703f1719509efad4933683a1771c9024ba/jupyterhub-5.3.0-py3-none-any.whl", hash = "sha256:310c284aca2ebe940bd6d4daffa1d5ab42a412b84d43e7ddacbed759fc47ed22", size = 10792679, upload-time = "2025-04-15T12:56:11.794Z" },
+    { url = "https://files.pythonhosted.org/packages/48/18/7cdd8e3abad8765b48c95bd30642de87f48df5bfe5599e735889fa52bddc/jupyterhub-4.1.6-py3-none-any.whl", hash = "sha256:3a625fae7fae069b4af1ab907c8cf51061f545ce7af2126d394d81f251acea61", size = 3806384, upload-time = "2024-07-31T08:46:35.43Z" },
 ]
 
 [[package]]
@@ -2978,7 +3001,9 @@ dev = [
     { name = "nomad-lab", extra = ["dev", "infrastructure"] },
 ]
 jupyter = [
+    { name = "jupyterhub" },
     { name = "jupyterlab" },
+    { name = "oauthenticator" },
     { name = "voila" },
 ]
 plugins = [
@@ -2993,6 +3018,7 @@ plugins = [
 
 [package.metadata]
 requires-dist = [
+    { name = "jupyterhub", marker = "extra == 'jupyter'", specifier = "<5" },
     { name = "jupyterlab", marker = "extra == 'jupyter'", specifier = ">=4.0" },
     { name = "nomad-baseclasses", marker = "extra == 'plugins'", git = "https://github.com/nomad-hzb/nomad-baseclasses.git" },
     { name = "nomad-hiern", marker = "extra == 'plugins'", git = "https://github.com/nomad-hzb/nomad-hiern.git" },
@@ -3002,6 +3028,7 @@ requires-dist = [
     { name = "nomad-perotf", marker = "extra == 'plugins'", git = "https://github.com/nomad-hzb/nomad-perotf.git" },
     { name = "nomad-pvcomb", marker = "extra == 'plugins'", git = "https://codebase.helmholtz.cloud/pvcomb/nomad-pvcomb.git?rev=develop" },
     { name = "nomad-tfsc-general", marker = "extra == 'plugins'", git = "https://github.com/nomad-hzb/nomad-tfsc-general.git" },
+    { name = "oauthenticator", marker = "extra == 'jupyter'", specifier = "<16" },
     { name = "perovskite-solar-cell-database", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-perovskite-solar-cells-database.git" },
     { name = "plotly", specifier = "<6.0" },
     { name = "voila", marker = "extra == 'jupyter'" },
@@ -3329,20 +3356,17 @@ wheels = [
 
 [[package]]
 name = "oauthenticator"
-version = "17.3.0"
+version = "15.1.0"
 source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
 dependencies = [
     { name = "jsonschema" },
     { name = "jupyterhub" },
-    { name = "pyjwt" },
     { name = "requests" },
     { name = "ruamel-yaml" },
-    { name = "tornado" },
-    { name = "traitlets" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/ae/99/883f6e226bd61922e7161032c413adcdbd0b4f397f9e7539b9c78af97872/oauthenticator-17.3.0.tar.gz", hash = "sha256:e5d90cb2411fff3dc6fcc1633468233c0e0e0239422c087c7734d1685055b8f3", size = 65221, upload-time = "2024-12-11T14:05:09.42Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/1f/a0/0fc870a69dacb2187d6508bdfc78bc4cf53bbc78527cf3f8ede890354aff/oauthenticator-15.1.0.tar.gz", hash = "sha256:d1d9873c9b66e1af973291968b9573d25378bd8c647f30d73b8d8fb27b1a0b85", size = 49472, upload-time = "2022-09-08T08:55:07.473Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/0c/2f/dc98e8e023dfbebe88e8725470d13565f61f3a5ef6835f330ad6a1d0b1e0/oauthenticator-17.3.0-py3-none-any.whl", hash = "sha256:1aaa7e21996bb6d53d303ac5362cc26a40812c0dbb722e7bffa24edd813390a1", size = 85064, upload-time = "2024-12-11T14:05:06.545Z" },
+    { url = "https://files.pythonhosted.org/packages/dc/6b/6d929c788bf5fb66618dc8cf4ac2db453159cd3dbafc1c86d62dc26ae358/oauthenticator-15.1.0-py3-none-any.whl", hash = "sha256:ad1b0da201f2bf2ab0b97a90ec350ddaefc7e9909ddb7e4f22c1d15b42f19b21", size = 66211, upload-time = "2022-09-08T08:55:06.293Z" },
 ]
 
 [[package]]
