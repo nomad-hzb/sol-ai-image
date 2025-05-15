@@ -34,7 +34,7 @@ plugins = [
   "nomad-pvcomb @ git+https://codebase.helmholtz.cloud/pvcomb/nomad-pvcomb.git@develop",
   "nomad-tfsc-general @ git+https://github.com/nomad-hzb/nomad-tfsc-general.git"
 ]
-jupyter = ["voila", "jupyterlab>=4.0"]
+jupyter = ["voila", "jupyterlab>=4.0", 'jupyterhub<5','oauthenticator<16']
 dev = ["nomad-lab[parsing, infrastructure, dev]==1.3.16rc2"]
 
 [tool.uv]
