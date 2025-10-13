@@ -36,7 +36,7 @@ jupyter = [
 'ipysheet',
 'ipydatagrid',
 'jupyter-flex',
-'ipyvuetify @ git+https://github.com/RoteKekse/ipyvuetify',
+'ipyvuetify',
 'ipympl',
 'ipython<9',
 'pyvis',
