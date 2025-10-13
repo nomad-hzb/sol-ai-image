@@ -38,6 +38,7 @@ jupyter = [
 'jupyter-flex',
 'ipyvuetify==1.11.3',
 'ipympl',
+'ipython<9',
 'pyvis',
 #'baybe',
 'lmfit',
