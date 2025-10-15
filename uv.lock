@@ -1,12 +1,14 @@
 version = 1
-revision = 1
 requires-python = ">=3.12"
 resolution-markers = [
-    "python_full_version >= '3.14' and sys_platform == 'win32'",
-    "python_version < '0'",
-    "python_full_version < '3.14' and sys_platform == 'win32'",
-    "python_full_version >= '3.14' and sys_platform != 'win32'",
-    "python_full_version < '3.14' and sys_platform != 'win32'",
+    "python_full_version >= '3.14' and platform_system == 'Windows' and sys_platform == 'win32'",
+    "python_full_version >= '3.14' and platform_system != 'Windows' and sys_platform == 'win32'",
+    "python_full_version < '3.14' and platform_system == 'Windows' and sys_platform == 'win32'",
+    "python_full_version < '3.14' and platform_system != 'Windows' and sys_platform == 'win32'",
+    "python_full_version >= '3.14' and platform_system == 'Windows' and sys_platform != 'win32'",
+    "python_full_version >= '3.14' and platform_system != 'Windows' and sys_platform != 'win32'",
+    "python_full_version < '3.14' and platform_system == 'Windows' and sys_platform != 'win32'",
+    "python_full_version < '3.14' and platform_system != 'Windows' and sys_platform != 'win32'",
 ]
 
 [options]
@@ -122,8 +124,10 @@ name = "argon2-cffi-bindings"
 version = "21.2.0"
 source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
 resolution-markers = [
-    "python_full_version >= '3.14' and sys_platform == 'win32'",
-    "python_full_version >= '3.14' and sys_platform != 'win32'",
+    "python_full_version >= '3.14' and platform_system == 'Windows' and sys_platform == 'win32'",
+    "python_full_version >= '3.14' and platform_system != 'Windows' and sys_platform == 'win32'",
+    "python_full_version >= '3.14' and platform_system == 'Windows' and sys_platform != 'win32'",
+    "python_full_version >= '3.14' and platform_system != 'Windows' and sys_platform != 'win32'",
 ]
 dependencies = [
     { name = "cffi", marker = "python_full_version >= '3.14'" },
@@ -147,8 +151,10 @@ name = "argon2-cffi-bindings"
 version = "25.1.0"
 source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
 resolution-markers = [
-    "python_full_version < '3.14' and sys_platform == 'win32'",
-    "python_full_version < '3.14' and sys_platform != 'win32'",
+    "python_full_version < '3.14' and platform_system == 'Windows' and sys_platform == 'win32'",
+    "python_full_version < '3.14' and platform_system != 'Windows' and sys_platform == 'win32'",
+    "python_full_version < '3.14' and platform_system == 'Windows' and sys_platform != 'win32'",
+    "python_full_version < '3.14' and platform_system != 'Windows' and sys_platform != 'win32'",
 ]
 dependencies = [
     { name = "cffi", marker = "python_full_version < '3.14'" },
@@ -624,7 +630,7 @@ name = "click"
 version = "8.2.1"
 source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
 dependencies = [
-    { name = "colorama", marker = "sys_platform == 'win32'" },
+    { name = "colorama", marker = "platform_system == 'Windows'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/60/6c/8ca2efa64cf75a977a0d7fac081354553ebe483345c734fb6b6515d96bbc/click-8.2.1.tar.gz", hash = "sha256:27c491cc05d968d271d5a1db13e3b5a184636d9d930f148c50b038f0d0646202", size = 286342 }
 wheels = [
@@ -1600,7 +1606,7 @@ name = "ipykernel"
 version = "6.30.1"
 source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
 dependencies = [
-    { name = "appnope", marker = "sys_platform == 'darwin'" },
+    { name = "appnope", marker = "platform_system == 'Darwin'" },
     { name = "comm" },
     { name = "debugpy" },
     { name = "ipython" },
@@ -2941,7 +2947,6 @@ requires-dist = [
     { name = "voila", marker = "extra == 'jupyter'" },
     { name = "xraylarch", marker = "extra == 'jupyter'" },
 ]
-provides-extras = ["plugins", "jupyter", "dev"]
 
 [[package]]
 name = "nomad-hiern"
@@ -3136,7 +3141,7 @@ wheels = [
 [[package]]
 name = "nomad-tfsc-general"
 version = "0.1.0"
-source = { git = "https://github.com/nomad-hzb/nomad-tfsc-general.git#7341b5360d69522a5a59e82f248ec2e7ef06aeb8" }
+source = { git = "https://github.com/nomad-hzb/nomad-tfsc-general.git#171289b2be858b424d887f97fa64f8ff04a07179" }
 dependencies = [
     { name = "nomad-baseclasses" },
     { name = "nomad-lab" },
@@ -4111,7 +4116,7 @@ version = "1.9.5"
 source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
 dependencies = [
     { name = "charset-normalizer" },
-    { name = "pywin32", marker = "sys_platform == 'win32'" },
+    { name = "pywin32", marker = "platform_system == 'Windows'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/55/21/8145313e9f42fa6b8970390415b93fca6b2e56655718bfd70674bd87bd77/pyshortcuts-1.9.5.tar.gz", hash = "sha256:49dbb4c3f032ad4f6c54ba4c84bf7ef32c5538422191924281597278bbb6913c", size = 1004523 }
 wheels = [
@@ -4430,7 +4435,7 @@ name = "qrcode"
 version = "7.4.2"
 source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
 dependencies = [
-    { name = "colorama", marker = "sys_platform == 'win32'" },
+    { name = "colorama", marker = "platform_system == 'Windows'" },
     { name = "pypng" },
     { name = "typing-extensions" },
 ]
@@ -5300,7 +5305,7 @@ name = "tqdm"
 version = "4.67.1"
 source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
 dependencies = [
-    { name = "colorama", marker = "sys_platform == 'win32'" },
+    { name = "colorama", marker = "platform_system == 'Windows'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/a8/4b/29b4ef32e036bb34e4ab51796dd745cdba7ed47ad142a9f4a1eb8e0c744d/tqdm-4.67.1.tar.gz", hash = "sha256:f8aef9c52c08c13a65f30ea34f4e5aac3fd1a34959879d7e59e63027286627f2", size = 169737 }
 wheels = [
