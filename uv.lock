@@ -2966,7 +2966,7 @@ requires-dist = [
 [[package]]
 name = "nomad-hiern"
 version = "1.0.0"
-source = { git = "https://github.com/nomad-hzb/nomad-hiern.git#4941eb5f83fd364cad1fa67511e6b4affce257ed" }
+source = { git = "https://github.com/nomad-hzb/nomad-hiern.git#d4aa77f9ce65be5b6b3aea034aae4191f787fef3" }
 
 [[package]]
 name = "nomad-hysprint"
