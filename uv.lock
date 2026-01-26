@@ -2886,7 +2886,7 @@ wheels = [
 [[package]]
 name = "nomad-baseclasses"
 version = "1.0.0"
-source = { git = "https://github.com/nomad-hzb/nomad-baseclasses.git#f7343aa18d69feab9ca9e95ff0d45ddc3428a7a3" }
+source = { git = "https://github.com/nomad-hzb/nomad-baseclasses.git#11870384bd564cd735217dc67e4fe1f9894923d8" }
 dependencies = [
     { name = "chardet" },
     { name = "hdf5plugin" },
@@ -2977,7 +2977,7 @@ source = { git = "https://github.com/nomad-hzb/nomad-hiern.git#d4aa77f9ce65be5b6
 [[package]]
 name = "nomad-hysprint"
 version = "1.0.0"
-source = { git = "https://github.com/nomad-hzb/nomad-hysprint.git#d7fb26309144aa153e9cd2471c174b658ec2dde0" }
+source = { git = "https://github.com/nomad-hzb/nomad-hysprint.git#b40c8dc9f88efcea95d7e9bc4983d15d6867da55" }
 dependencies = [
     { name = "httpx" },
     { name = "nomad-baseclasses" },
@@ -3102,7 +3102,7 @@ wheels = [
 [[package]]
 name = "nomad-perotf"
 version = "1.0.0"
-source = { git = "https://github.com/nomad-hzb/nomad-perotf.git#35a36a3ea26ab648a0e6c427b26173f57a48ae67" }
+source = { git = "https://github.com/nomad-hzb/nomad-perotf.git#de35b49a544a7967b935f3c5d1aa9ea0c2e04de0" }
 dependencies = [
     { name = "nomad-baseclasses" },
     { name = "nomad-lab" },
