@@ -3101,7 +3101,7 @@ wheels = [
 [[package]]
 name = "nomad-tfsc-general"
 version = "0.1.0"
-source = { git = "https://github.com/nomad-hzb/nomad-tfsc-general.git#50e1468a64d69ea605f535ed8e67b500056215e" }
+source = { git = "https://github.com/nomad-hzb/nomad-tfsc-general.git#d0516f1557ccf46760e8714e9ada6162e0137b84" }
 dependencies = [
     { name = "nomad-baseclasses" },
     { name = "nomad-lab" },
