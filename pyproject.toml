@@ -40,7 +40,7 @@ jupyter = [
 'jupyter-flex',
 'ipyvuetify',
 'ipympl',
-'ipython<9',
+'ipython<9','ipykernel<7',
 'pyvis',
 #'baybe',
 'lmfit',
