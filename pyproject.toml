@@ -47,14 +47,12 @@ jupyter = [
 'jupyterlab_h5web',
 'jupyterlab>4.0',
 'xraylarch',
+'jupyterlab-spreadsheet-editor',
 'seaborn', # 'jupyterhub<5','oauthenticator<16',
 'jupyter-events',
 ]
 
-gpu-action = []
-cpu-action = []
-
-dev = ["nomad-lab[parsing, infrastructure, dev]==1.4.2]
+dev = ["nomad-lab[parsing, infrastructure, dev]==1.4.2"]
 
 [tool.uv]
 extra-index-url = [
