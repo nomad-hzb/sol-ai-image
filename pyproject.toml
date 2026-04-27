@@ -61,5 +61,8 @@ extra-index-url = [
 constraint-dependencies = ["hyperspy>=1.7.6"]
 prerelease = "allow"
 
+[tool.uv.sources]
+pynxtools-xps = { git = "https://github.com/FAIRmat-NFDI/pynxtools-xps.git" }
+
 [tool.setuptools.packages.find]
 exclude = ["gui*", "docs*", "config*"]
