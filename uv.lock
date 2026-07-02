@@ -4292,7 +4292,7 @@ wheels = [
 [[package]]
 name = "nomad-baseclasses"
 version = "1.0.0"
-source = { git = "https://github.com/nomad-hzb/nomad-baseclasses.git#bccaa9a77bd224333e65800185f52d0e64cc3a6d" }
+source = { git = "https://github.com/nomad-hzb/nomad-baseclasses.git#f3496d0eddb8e7b1950188013698ee7de6a7a6dc" }
 dependencies = [
     { name = "chardet" },
     { name = "hdf5plugin" },
@@ -4606,7 +4606,7 @@ wheels = [
 [[package]]
 name = "nomad-tfsc-general"
 version = "0.1.0"
-source = { git = "https://github.com/nomad-hzb/nomad-tfsc-general.git#0101df0009e214d85dcb4af78d78fd143f3709ee" }
+source = { git = "https://github.com/nomad-hzb/nomad-tfsc-general.git#70340156a20bbeb6efb7d7f4349f03673ce331c7" }
 dependencies = [
     { name = "nomad-baseclasses" },
     { name = "nomad-lab" },
