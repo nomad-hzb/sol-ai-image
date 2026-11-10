@@ -53,6 +53,8 @@ jupyter = [
 'jupyterlab-spreadsheet-editor',
 'seaborn', # 'jupyterhub<5','oauthenticator<16',
 'jupyter-events',
+  "nomad-north-jupyter>=0.2.6",
+  "nomad-gui==2.0.1",
 ]
 
 dev = ["nomad-lab[infrastructure, dev]==2.0.1"]
