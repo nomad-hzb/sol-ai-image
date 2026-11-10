@@ -57,6 +57,8 @@ jupyter = [
   "nomad-gui==2.0.1",
 ]
 
+cpu-action = []
+
 dev = ["nomad-lab[infrastructure, dev]==2.0.1"]
 
 [tool.uv]
